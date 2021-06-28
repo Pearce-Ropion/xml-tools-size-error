@@ -1,0 +1,14 @@
+{
+    "name": "ast-repro-error",
+    "version": "1.0.0",
+    "description": "Illustrates a maximum call stack exceeded error in @xml-tools/parser",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "author": "Pearce Ropion",
+    "license": "MIT",
+    "dependencies": {
+        "@xml-tools/ast": "^5.0.5",
+        "@xml-tools/parser": "^1.0.11"
+    }
+}
