@@ -8,8 +8,9 @@ I believe the error has to do with the size of the file and not the depth of
 the xml.
 
 The input file is called `input.xml`
-File Size: `7MB`
-Maximum XML Depth: `29`
+
+-   File Size: `7MB`
+-   Maximum XML Depth: `29`
 
 ### Getting started
 
