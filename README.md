@@ -7,7 +7,7 @@ This repo is a minimum reproducable example that illustrates a
 I believe the error has to do with the size of the file and not the depth of
 the xml.
 
-The input file is called `input.xml`
+The input file is called `inputs/main.xml`
 
 -   File Size: `7MB`
 -   Maximum XML Depth: `29`
@@ -21,6 +21,6 @@ The input file is called `input.xml`
 ### Testing a smaller XML document
 
 I have included a script that runs the parser on a smaller document, the
-contents of which are a subset of the larger xml file.
+contents of which are a subset of the larger xml file. The input file is called `inputs/small.xml`
 
 1. Run `npm run start:small`
