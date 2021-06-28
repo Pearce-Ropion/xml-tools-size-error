@@ -1,9 +1,10 @@
 {
-    "name": "ast-repro-error",
+    "name": "xml-tools-size-error",
     "version": "1.0.0",
-    "description": "Illustrates a maximum call stack exceeded error in @xml-tools/parser",
+    "description": "Illustrates a maximum call stack size exceeded error in @xml-tools/parser",
     "scripts": {
-        "start": "node index.js"
+        "start": "node src/index.js",
+        "start:small": "node src/small.js"
     },
     "author": "Pearce Ropion",
     "license": "MIT",

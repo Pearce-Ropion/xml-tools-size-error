@@ -1,0 +1,71 @@
+<section version="5.0" xinfo:resource="UUID-bd20f1aa-ab30-ac1a-b9cc-9b32567f184f" xinfo:resource-id="652646" xinfo:resource-type="component fork" xinfo:resource-title="Design Principles" xinfo:resource-titlelabel="" xinfo:version-major="1" xinfo:version-minor="0" xinfo:origin="UUID-204b7321-ccb4-0a21-5e7b-9c35a61cf474" xinfo:origin-id="650738" xinfo:time-modified="1619740111" xinfo:time-created="1619287750" xml:id="UUID-bd20f1aa-ab30-ac1a-b9cc-9b32567f184f" xml:lang="en" xinfo:linktype="ResourceLink">
+    <title>Design Principles</title>
+    <mediaobject>
+        <videoobject>
+            <videodata fileref="https://www.youtube.com/embed/2B8ayWaCcQg"/>
+        </videoobject>
+    </mediaobject>
+    <para>SingleStore DB’s distributed architecture is designed to be straightforward, simple, and fast. The architecture is designed around a few key principles:</para>
+    <para>The other Distributed Architecture topics explain the high-level concepts behind how SingleStore DB accomplishes these goals.</para>
+    <informaltable>
+        <colgroup>
+            <col align="left" width="50%"/>
+            <col align="left" width="50%"/>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>
+                    <para>Principle</para>
+                </th>
+                <th>
+                    <para>Description</para>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <para>Performance first</para>
+                </td>
+                <td>
+                    <para>SingleStore DB is designed to enable high throughput on concurrent workloads, and is a highly scalable distributed system. The cluster can be scaled out at any time to provide increased storage capacity and processing power. SingleStore DB can process billions of rows per second on clusters of commodity hardware.</para>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <para>Separate the cluster into two tiers (aggregators and leaves) and push as much work as possible to the leaves.</para>
+                </td>
+                <td>
+                    <para>This enables you to scale cluster capacity and query performance online by adding additional leaves to a cluster. SingleStore DB cluster operations are dynamic - you will never have to restart any aggregators or leaves while managing the cluster.</para>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <para>No single point of failure.</para>
+                </td>
+                <td>
+                    <para>By running the cluster with redundancy, you ensure that every partition of data is backed up to a hot standby. In the event of any leaf failure, SingleStore DB will automatically fail over replica partitions. The aggregator tier is also resilient to failure.</para>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <para>Powerful but simple cluster management.</para>
+                </td>
+                <td>
+                    <para>
+                        The distributed system exposes , which lets you scale up and down the cluster, restore data in the event of failure, and recreate the cluster from scratch in the event of a complete system failure.
+                        <xref remap="UUID-d05fbba4-dc7c-cb2d-6a98-7d65dcefb773" xlink:href="#UUID-03eed3f7-a40a-1616-8a94-3d3f95b03eca"/>
+                    </para>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <para>No implicit data movement.</para>
+                </td>
+                <td>
+                    <para>In the event of a failure, SingleStore DB promotes just enough replica partitions to put the cluster back online. SingleStore DB will never rebalance or move data around implicitly.</para>
+                </td>
+            </tr>
+        </tbody>
+    </informaltable>
+</section>
